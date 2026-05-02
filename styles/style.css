@@ -1272,9 +1272,9 @@ form {
 
     /* 🔵 НЕОНОВАЯ ГРАДИЕНТНАЯ РАМКА */
     box-shadow: 
-        0 0 10px #00aaff,
-        0 0 20px #00aaff,
-        0 0 30px #0077ff;
+        0 0 10px #14181a,
+        0 0 20px #004d74,
+        0 0 30px #003979;
     
     transition: 0.3s;
 }
@@ -1284,8 +1284,8 @@ form {
     transform: scale(1.05);
     box-shadow: 
         0 0 15px #00aaff,
-        0 0 30px #00aaff,
-        0 0 40px #0077ff;
+        0 0 30px #00496d,
+        0 0 40px #012249;
 }
 
 .user-image img {
@@ -1299,8 +1299,8 @@ form {
     position: absolute;
     bottom: 3px;
     right: 3px;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     background: #00ff6a;
     border-radius: 50%;
     border: 2px solid #000;
