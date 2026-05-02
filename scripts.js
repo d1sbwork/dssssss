@@ -20,29 +20,28 @@ const tg = window.Telegram.WebApp;
 
 tg.expand();
 
-const user = tg.initDataUnsafe?.user;
-console.log(user);
+const tg = window.Telegram.WebApp;
+
+tg.expand();
+
+const user = tg.initDataUnsafe?.user; // ✅ ВАЖНО
+
 if (user) {
     console.log(user);
 
     const avatar = user.photo_url;
     const name = user.first_name;
-    const id = user.id;
 
-    // вставка в HTML
     const img = document.querySelector(".user-image img");
-    if (img) img.src = avatar;
+
+    if (img && avatar) {
+        img.src = avatar;
+    } else if (img) {
+        img.src = "media/default-avatar.png";
+    }
 
     const nameBlock = document.querySelector(".user-info span");
     if (nameBlock) nameBlock.innerText = name;
-}
-
-const img = document.querySelector(".user-image img");
-
-if (img && avatar) {
-    img.src = avatar;
-} else if (img) {
-    img.src = "media/default-avatar.png";
 }
 
 const cases = [
