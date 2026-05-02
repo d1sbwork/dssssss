@@ -10,15 +10,11 @@ const itemsLenta = document.querySelector(".item-lenta"); // Лента посл
 const navItems = document.querySelectorAll(".nav-item"); // Теги сортировки кейсов
 const inventoryList = document.querySelector(".cards-in-inventory"); //Предметы в инвентаре
 const casePage = document.querySelector(".case-without-autorization"); // Странница открытия кейса
-const inventoryItems = profilePage.querySelectorAll(".card"); // карты в профиле
+const inventoryItems = profilePage ? profilePage.querySelectorAll(".card") : [];// карты в профиле
 const exitButton = document.querySelector(".exit");
 const userInfo = document.querySelector(".user-info");
 const ruletkaSection = casePage.querySelector(".ruletka-section");
-const krutkaSection = casePage.querySelector(".open-info");
-const tg = window.Telegram.WebApp;
-
-
-tg.expand();
+const krutkaSection = casePage ? casePage.querySelector(".open-info") : null;
 
 const tg = window.Telegram.WebApp;
 
