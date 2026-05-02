@@ -601,3 +601,18 @@ document.querySelectorAll("button").forEach(btn => {
     });
 });
 
+function spinRuletka() {
+    const ruletka = document.querySelector(".ruletka"); // ⚠️ поставь свой класс
+
+    if (!ruletka) {
+        console.log("нет рулетки");
+        return;
+    }
+
+    ruletka.classList.add("spinning");
+
+    // остановка через 3 секунды
+    setTimeout(() => {
+        ruletka.classList.remove("spinning");
+    }, 3000);
+}
