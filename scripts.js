@@ -595,4 +595,9 @@ input.addEventListener("input", () => {
   }
 });
 
+document.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        console.log("КНОПКА НАЖАТА", btn);
+    });
+});
 
