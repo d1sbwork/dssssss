@@ -1,16 +1,16 @@
+
+.ruletka.spinning {
+    animation: spin 3s ease-out;
+}
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(1440deg);
     }
 }
-
-.spinning {
-    animation: spin 2s linear infinite;
-}
-
 
 body {
   background-color: #090707;

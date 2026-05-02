@@ -626,3 +626,35 @@ if (openBtn) {
         spinRuletka();
     });
 }
+
+const openBtn = document.querySelector(".spin-btn");
+
+function spinRuletka() {
+    const ruletka = document.querySelector(".ruletka");
+
+    if (!ruletka) {
+        console.log("нет рулетки");
+        return;
+    }
+
+    console.log("крутится 🚀");
+
+    ruletka.classList.add("spinning");
+
+    setTimeout(() => {
+        ruletka.classList.remove("spinning");
+    }, 3000);
+}
+
+if (openBtn) {
+    openBtn.addEventListener("click", spinRuletka);
+}
+
+const btn = document.querySelector(".spin-btn");
+
+btn.addEventListener("click", () => {
+    console.log("КНОПКА РАБОТАЕТ");
+});
+
+const ruletka = document.querySelector(".ruletka");
+console.log(ruletka);
