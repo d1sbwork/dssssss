@@ -598,6 +598,7 @@ input.addEventListener("input", () => {
 document.querySelectorAll("button").forEach(btn => {
     btn.addEventListener("click", () => {
         console.log("КНОПКА НАЖАТА", btn);
+        spinRuletka();
     });
 });
 
@@ -615,4 +616,13 @@ function spinRuletka() {
     setTimeout(() => {
         ruletka.classList.remove("spinning");
     }, 3000);
+}
+
+const openBtn = document.querySelector(".spin-btn");
+
+if (openBtn) {
+    openBtn.addEventListener("click", () => {
+        console.log("КНОПКА РАБОТАЕТ");
+        spinRuletka();
+    });
 }
