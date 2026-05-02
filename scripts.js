@@ -15,7 +15,7 @@ const exitButton = document.querySelector(".exit");
 const userInfo = document.querySelector(".user-info");
 const ruletkaSection = casePage.querySelector(".ruletka-section");
 const krutkaSection = casePage ? casePage.querySelector(".open-info") : null;
-const openBtn = document.querySelector("button");
+const openBtn = document.querySelector(".spin-btn");
 
 
 
@@ -595,40 +595,6 @@ input.addEventListener("input", () => {
   }
 });
 
-document.querySelectorAll("button").forEach(btn => {
-    btn.addEventListener("click", () => {
-        console.log("КНОПКА НАЖАТА", btn);
-        spinRuletka();
-    });
-});
-
-function spinRuletka() {
-    const ruletka = document.querySelector(".ruletka"); // ⚠️ поставь свой класс
-
-    if (!ruletka) {
-        console.log("нет рулетки");
-        return;
-    }
-
-    ruletka.classList.add("spinning");
-
-    // остановка через 3 секунды
-    setTimeout(() => {
-        ruletka.classList.remove("spinning");
-    }, 3000);
-}
-
-const openBtn = document.querySelector(".spin-btn");
-
-if (openBtn) {
-    openBtn.addEventListener("click", () => {
-        console.log("КНОПКА РАБОТАЕТ");
-        spinRuletka();
-    });
-}
-
-const openBtn = document.querySelector(".spin-btn");
-
 function spinRuletka() {
     const ruletka = document.querySelector(".ruletka");
 
@@ -646,15 +612,8 @@ function spinRuletka() {
     }, 3000);
 }
 
+const openBtn = document.querySelector(".spin-btn");
+
 if (openBtn) {
     openBtn.addEventListener("click", spinRuletka);
 }
-
-const btn = document.querySelector(".spin-btn");
-
-btn.addEventListener("click", () => {
-    console.log("КНОПКА РАБОТАЕТ");
-});
-
-const ruletka = document.querySelector(".ruletka");
-console.log(ruletka);
