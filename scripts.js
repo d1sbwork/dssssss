@@ -15,7 +15,7 @@ const exitButton = document.querySelector(".exit");
 const userInfo = document.querySelector(".user-info");
 const ruletkaSection = casePage.querySelector(".ruletka-section");
 const krutkaSection = casePage ? casePage.querySelector(".open-info") : null;
-const openBtn = document.querySelector(".spin-btn");
+
 
 
 
@@ -35,11 +35,7 @@ function spinRuletka() {
     ruletka.style.transform = `rotate(${deg}deg)`;
 }
 
-if (openBtn) {
-    openBtn.addEventListener("click", () => {
-        spinRuletka();
-    });
-}
+
 
 const tg = window.Telegram.WebApp;
 
