@@ -607,9 +607,3 @@ function spinRuletka() {
         ruletka.classList.remove("spinning");
     }, 3000);
 }
-
-const openBtn = document.querySelector(".spin-btn");
-
-if (openBtn) {
-    openBtn.addEventListener("click", spinRuletka);
-}
