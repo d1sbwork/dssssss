@@ -15,6 +15,31 @@ const exitButton = document.querySelector(".exit");
 const userInfo = document.querySelector(".user-info");
 const ruletkaSection = casePage.querySelector(".ruletka-section");
 const krutkaSection = casePage ? casePage.querySelector(".open-info") : null;
+const openBtn = document.querySelector("button");
+
+
+
+function spinRuletka() {
+    const ruletka = document.querySelector("*[class*='rulet']");
+
+     console.log("РУЛЕТКА:", ruletka);
+     
+    if (!ruletka) {
+        console.log("Рулетка не найдена");
+        return;
+    }
+
+    const deg = 2000 + Math.random() * 1000;
+
+    ruletka.style.transition = "transform 4s cubic-bezier(0.17, 0.67, 0.83, 0.67)";
+    ruletka.style.transform = `rotate(${deg}deg)`;
+}
+
+if (openBtn) {
+    openBtn.addEventListener("click", () => {
+        spinRuletka();
+    });
+}
 
 const tg = window.Telegram.WebApp;
 
